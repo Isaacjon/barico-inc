@@ -1,0 +1,17 @@
+/* styles/fonts.css */
+@font-face {
+  font-family: 'BrandFont'; /* Choose a name for your font */
+  src: url('/fonts/brandFont.ttf') format('truetype'); /* Adjust format if needed */
+  font-weight: normal; /* Or specify weight if you have different weights */
+  font-style: normal; /* Or specify style if you have italics, etc. */
+  font-display: swap; /* Important for performance */
+}
+
+/* Example for multiple weights/styles */
+@font-face {
+  font-family: 'BrandFont';
+  src: url('/fonts/brandFont-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

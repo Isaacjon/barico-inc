@@ -1,6 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, League_Gothic, Lilita_One, Lato, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
+// import './fonts.css'
+
+const brandFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/brandFont.ttf",
+      style: "normal",
+    }
+  ],
+  variable: "--font-brand",
+  weight: "600"
+})
+
+const montserratSans = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,23 +29,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const leagueGothic = League_Gothic({
-  variable: "--font-league-gothic",
-  subsets: ["latin"],
-});
-
-const lilitaOne = Lilita_One({
-  variable: "--font-lilita-one",
-  subsets: ["latin"],
-  weight: "400"
-});
-
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: "700"
-})
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -48,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${leagueGothic.variable} ${lilitaOne.variable} ${lato.variable} ${poppins.variable} antialiased`}
+        className={`${brandFont.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserratSans.variable} antialiased`}
       >
         {children}
       </body>

@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        brand: ["var(--font-brand)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -20,9 +23,12 @@ export default {
         },
         black: "#000",
         dark: "#333",
-        brand: "#F28705", // || "#024959" || "#702DE3",
+        brand: "#ff561d", //"#F28705", // || "#024959" || "#702DE3",
         transparent: "transparent",
       },
+      boxShadow: {
+        customShadow: "0px 5px 30px #ff51009c"
+      }
     },
   },
   plugins: [],

@@ -9,15 +9,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a; */
+    /* --foreground: #ededed; */
+    /* color: #ff51009c; */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   min-height: 100vh;
 }
 
@@ -41,13 +42,15 @@ body {
 
   .header-bg-mobile {
     background-image: url("/home-banner.png");
+    background: linear-gradient(120deg, rgb(255,255,255, 0.6) 50%, rgb(0,0,0, 0.6), 50%), url("/test-banner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .header-bg {
-    background-image: url("/home-banner.png");
+    background-image: url("/test-banner.jpg");
+    background: linear-gradient(120deg, rgb(255,255,255, 0.6) 50%, rgb(0,0,0, 0.6), 50%), url("/test-banner.jpg");
     background-position: center;
     background-size: cover;
   }
