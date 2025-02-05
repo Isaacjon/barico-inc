@@ -5,7 +5,7 @@ import { useEffect, useState, } from "react"
 
 export const Navbar = () => {
   const [visible, setVisible] = useState(false)
-
+  console.log('visible', visible)
   const [activeIndex, setActiveIndex] = useState(0)
 
   const [burger, setBurger] = useState(false)
