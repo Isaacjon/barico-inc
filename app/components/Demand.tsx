@@ -1,33 +1,41 @@
-import React from "react";
+"use client"
+
+import { motion } from "motion/react"
 
 export const Demand = () => {
   return (
-    <div className="py-24 px-4" id="demand">
-      <h3 className="text-brand text-2xl font-semibold text-center">Спрос</h3>
-      {/* <p className='text-black text-2xl font-semibold text-center max-w-[700px] mx-auto mt-5 '>
-        Доказанная привлекательность: Рынок требует  нашу продукцию 
-      </p> */}
-      <div className="max-w-screen-2xl mx-auto mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3 ">
-        {data.map((item, i) => (
-          <div
-            style={{ background: "rgba(238,237,237, 0.8)" }}
-            key={i}
-            className={`scale-100 flex flex-col bg-gray-900 shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
-          >
+    <div className="py-10 md:py-24 px-4" id="demand">
+      <motion.div
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <h3 className="text-brand text-2xl font-semibold text-center">Спрос</h3>
+        {/* <p className='text-black text-2xl font-semibold text-center max-w-[700px] mx-auto mt-5 '>
+          Доказанная привлекательность: Рынок требует  нашу продукцию 
+        </p> */}
+        <div className="max-w-screen-2xl mx-auto mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3 ">
+          {data.map((item, i) => (
             <div
-              className={`p-3 flex flex-col gap-4 h-full rounded-[inherit]`}
+              style={{ background: "rgba(238,237,237, 0.8)" }}
+              key={i}
+              className={`scale-100 flex flex-col bg-gray-900 shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
             >
-              <div className="h-[260px] rounded-[inherit]">
-                <img
-                  className="h-full w-full object-cover rounded-[inherit]"
-                  src={`/demand-${i + 1}.png`}
-                />
+              <div
+                className={`p-3 flex flex-col gap-4 h-full rounded-[inherit]`}
+              >
+                <div className="h-[260px] rounded-[inherit]">
+                  <img
+                    className="h-full w-full object-cover rounded-[inherit]"
+                    src={`/demand-${i + 1}.png`}
+                  />
+                </div>
+                <p className="text-lg">{item.tite}</p>
               </div>
-              <p className="text-lg">{item.tite}</p>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };

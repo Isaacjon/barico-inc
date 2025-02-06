@@ -1,8 +1,10 @@
-import React from 'react'
+"use client"
+
+import { motion } from "motion/react"
 
 export const MarketingStrategy = () => {
   return (
-    <div className='ru-banner py-16 text-white'>
+    <div className='ru-banner py-16 text-white' id='strategy'>
       <div className='max-w-screen-2xl mx-auto px-4'>
           
           <div className='text-black text-center mb-4'>
@@ -11,13 +13,20 @@ export const MarketingStrategy = () => {
 
           <div>
             {data2.map((item, i)=> (
-              <div key={i} className={`flex gap-3 md:gap-5 p-2 md:p-5 ${item.bg} ${i && 'mt-[1px]'}`}>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.2 * i } }}
+                viewport={{ once: true, amount: 1 }}
+              >
+              <div className={`flex gap-3 md:gap-5 p-2 md:p-5 ${item.bg} ${i && 'mt-[1px]'}`}>
                 <div className='mt-[2px] rounded-md w-6 text-3xl md:text-5xl grid place-items-center text-white'>{i+1}</div>
                 <div className=''>
                   <b className='font-semibold md:text-2xl'>{item.title}: </b> <br />
                   <p className='mt-2 text-sm md:text-lg'>{item.subtitle}</p>
                 </div>
               </div>
+              </motion.div>
             ))}
           </div>
 

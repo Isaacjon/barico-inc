@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "motion/react"
+
 import Image from "next/image";
 import React from "react";
 
@@ -11,59 +15,64 @@ export const Facilites = () => {
       className="py-24  px-4 facilities-banner"
     >
       <div className="max-w-screen-2xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {data1.map((item, i) => (
-            <div key={i} className="text-white backdrop-blur-lg bg-semi-transparent-black rounded-2xl p-5">
-              <div className="flex items-center gap-2">
-                  <div className="min-w-[40px] aspect-square">
-                    <Image
-                      className="dark:invert"
-                      src={item.icon}
-                      alt="Location"
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                <span className="text-xl md:text-3xl font-bold">{item.title}</span>
-              </div>
-              <p className="mt-5 text-base md:text-lg">
-                {item.subtitle}
-              </p>
-            </div>
-        ))}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
-          {data2.map((item, i) => (
-              <div key={i} className="text-white backdrop-blur-md bg-semi-transparent-black rounded-2xl p-5">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
+          viewport={{ once: true, amount: 0.4 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {data1.map((item, i) => (
+              <div key={i} className="text-white backdrop-blur-lg bg-semi-transparent-black rounded-2xl p-5">
                 <div className="flex items-center gap-2">
-                  <div className="min-w-[40px] aspect-square">
-                    <Image
-                      className="dark:invert"
-                      src={item.icon}
-                      alt="Location"
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                <span className="text-lg md:text-xl font-bold">{item.title}</span>
-              </div>
-              <div>
-                {item.subItems.map((subItem, i) => (
-                  <p key={i} className="mt-5 text-base md:text-lg">
-                    <b className="font-bold">
-                    {subItem.title}: 
-                    </b>
-                    <span>
-                     {" "}{subItem.subtitle}
-                    </span>
-                  </p>
-                ))}
-              </div>
-
+                    <div className="min-w-[40px] aspect-square">
+                      <Image
+                        className="dark:invert"
+                        src={item.icon}
+                        alt="Location"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                  <span className="text-xl md:text-3xl font-bold">{item.title}</span>
+                </div>
+                <p className="mt-5 text-base md:text-lg">
+                  {item.subtitle}
+                </p>
               </div>
           ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+            {data2.map((item, i) => (
+                <div key={i} className="text-white backdrop-blur-md bg-semi-transparent-black rounded-2xl p-5">
+                  <div className="flex items-center gap-2">
+                    <div className="min-w-[40px] aspect-square">
+                      <Image
+                        className="dark:invert"
+                        src={item.icon}
+                        alt="Location"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                  <span className="text-lg md:text-xl font-bold">{item.title}</span>
+                </div>
+                <div>
+                  {item.subItems.map((subItem, i) => (
+                    <p key={i} className="mt-5 text-base md:text-lg">
+                      <b className="font-bold">
+                      {subItem.title}: 
+                      </b>
+                      <span>
+                      {" "}{subItem.subtitle}
+                      </span>
+                    </p>
+                  ))}
+                </div>
 
-        </div>
+                </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

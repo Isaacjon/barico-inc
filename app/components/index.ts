@@ -7,3 +7,4 @@ export { Marketing } from "./Marketing";
 export { MarketingStrategy } from "./MarketingStrategy";
 export { Facilites } from "./Facilites";
 export { DemandMarkets } from "./DemandMarkets";
+export { Contact } from './Contact'

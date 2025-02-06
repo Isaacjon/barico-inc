@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import { motion } from "motion/react"
 
 export const Marketing = () => {
   return (
@@ -6,12 +8,21 @@ export const Marketing = () => {
       <div className='max-w-screen-2xl mx-auto px-4'>
         <div className='grid md:grid-cols-2 gap-14 md:gap-4'>
           
-          <div className='flex flex-col gap-4 justify-center text-center md:text-start '>
-            <h2 className='text-2xl md:text-4xl font-bold'>МАРКЕТИНГ И ПРОДАЖИ: СТРАТЕГИЯ УСПЕХА</h2>
-            <p className='text-xl md:text-2xl'>Наш продукт будет направлен на ключевых потребителей углекислого бария</p>
-          </div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
+              viewport={{ once: true, amount: 0.6 }}
+              className='flex flex-col gap-4 justify-center text-center md:text-start'
+            >
+              <h2 className='text-2xl md:text-4xl font-bold'>МАРКЕТИНГ И ПРОДАЖИ: СТРАТЕГИЯ УСПЕХА</h2>
+              <p className='text-xl md:text-2xl'>Наш продукт будет направлен на ключевых потребителей углекислого бария</p>
+            </motion.div>
 
-          <div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
+              viewport={{ once: true, amount: 0.6 }}
+            >
             {data.map((item, i)=> (
               <div key={i} className={`flex gap-2 ${i && 'mt-4 md:mt-6'}`}>
                 {/* <div className='bg-brand mt-[2px] rounded-md max-w-6 min-w-6 max-h-6 min-h-6 grid place-items-center text-white'>{i+1}</div> */}
@@ -21,7 +32,7 @@ export const Marketing = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
         </div>
       </div>

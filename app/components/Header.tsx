@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "motion/react"
+
 export const Header = () => {
 
   return (
@@ -5,16 +9,24 @@ export const Header = () => {
       id="main"
       className="header-bg relative sm:bg-left-top md:bg-center pt-[80px] min-h-screen grid place-content-center"
     >
-      <div className="container py-[40px] pt-[55px] h-full text-white">
+      <div
+        className="container py-[40px] pt-[55px] h-full text-white">
         {/* subtitle */}
-        <h2 className="font-brand text-2xl text-center md:text-[60px] !leading-[150%] font-bold">
+        <motion.h2 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        className="font-brand text-2xl text-center md:text-[60px] !leading-[150%] font-bold">
           ПРОИЗВОДСТВО <br />
           УГЛЕКИСЛОГО БАРИЯ
-        </h2>
+        </motion.h2>
 
         <hr className="border-2 max-w-[300px] m-auto my-4 border-brand" />
 
-        <div className="flex flex-col items-center justify-center m-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          className="flex flex-col items-center justify-center m-auto"
+        >
           {/* title */}
           <div className="relative w-full px-6">
             {/* <div className="bg-brand h-5/6 w-[3px] absolute top-[50%] -translate-y-1/2"></div> */}
@@ -37,9 +49,7 @@ export const Header = () => {
               </span>
             </span>
           </h1>
-
-
-        </div>
+        </motion.div>
       </div>
     </div>
   );
