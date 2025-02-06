@@ -1,12 +1,13 @@
 export const Header = () => {
+
   return (
     <div
       id="main"
       className="header-bg-mobile sm:header-bg relative sm:bg-left-top md:bg-center pt-[80px] min-h-screen grid place-content-center"
     >
-      <div className="container py-[40px] pt-[55px] h-full">
+      <div className="container py-[40px] pt-[55px] h-full text-white">
         {/* subtitle */}
-        <h2 className="font-brand text-zinc-800 text-2xl text-center md:text-[60px] !leading-[150%] font-bold">
+        <h2 className="font-brand text-2xl text-center md:text-[60px] !leading-[150%] font-bold">
           ПРОИЗВОДСТВО <br />
           УГЛЕКИСЛОГО БАРИЯ
         </h2>
