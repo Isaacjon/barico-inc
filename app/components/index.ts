@@ -3,3 +3,7 @@ export { Header } from "./Header";
 export { ProjectCv } from "./ProjectCv";
 export { Demand } from "./Demand";
 export { Markets } from "./Markets";
+export { Marketing } from "./Marketing";
+export { MarketingStrategy } from "./MarketingStrategy";
+export { Facilites } from "./Facilites";
+export { DemandMarkets } from "./DemandMarkets";

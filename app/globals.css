@@ -32,6 +32,16 @@ body {
   /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #ccc, #f5f5f5 ); */
 }
 
+.ru-banner {
+  background: url("/try-banner1.jpg") no-repeat center / cover ;
+  background-image: linear-gradient(to right bottom, rgb(255, 255, 255, 1) 30%, rgb(255, 255, 255, 0.9) 100%), url("/overlay-bg.jpg");
+}
+
+.facilities-banner {
+  background: url("/warehouse.png") no-repeat center / cover ;
+  /* background-image: linear-gradient(to right bottom, rgb(0, 0, 0, 0.1) 30%, rgb(0, 0, 0, 0.1) 100%), url("/warehouse.png"); */
+}
+
 @layer base {
   .text-stroke-white {
     -webkit-text-stroke: 1px white;

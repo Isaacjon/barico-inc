@@ -1,28 +1,58 @@
 import React from 'react'
 
+
 export const Markets = () => {
   return (
-    <div className='py-24 px-4' id='demand'>
-      <h3 className='text-brand text-2xl font-semibold text-center'>РЫНОК</h3>
+    <div className='pb-24 px-4 ru-banner' id='markets'>
+      {/* <h3 className='text-white text-2xl font-semibold text-center'>РЫНОК</h3> */}
 
-      <div className='flex flex-col gap-6 mt-16'>
-        {data.map((item,i) => (
-          <div key={i} className='flex gap-6 xl:gap-16'>
-            <div className='max-w-[300px] lg:max-w-[370px] w-full font-semibold'>
+      <div className='max-w-screen-2xl mx-auto flex flex-col gap-6 mt-16 '>
+        {/* <div className='flex gap-6 justify-between'>
+          
+          <div className='w-1/2 flex justify-between'>
+          </div>
+
+          <div className='w-1/2 text-white flex'>
+            <div>
+              {Object.entries(data[0].topics).map((topic, i) => (
+                <div key={i} className={`flex gap-2 ml-auto ${i && 'mt-4'}`}>
+                  <div className='bg-brand rounded-md max-w-6 min-w-6 max-h-6 min-h-6 grid place-items-center'>{i+1}</div>
+                  <div>
+                    <h4 className='font-semibold text-xl'>{topic[0]}</h4>
+                    <p className='mt-2'>{topic[1]}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <img src={data[0].img} alt="" className='w-[200px] h-[300px] object-cover'/>
+          </div>
+        </div> */}
+
+        {data.map((item, i) => (
+          <div key={i} className={`${i && 'mt-8'}`}>
+            <div className='text-center text-2xl font-bold mb-4'>
               <h3>{item.tite}</h3>
             </div>
-            <div className='flex flex-col gap-2'>
-                {Object.entries(item.topics).map((entr, i) => (
-                <p key={i}>
-                  <b>{entr[0]}: </b>
-                  <span>{entr[1]}</span>
-                </p>
-                ))}
-            </div>
-            <div className='ml-auto min-h-[200px] max-h-[200px] min-w-[150px] max-w-[150px]'>
-             <img src={item.img} alt="" className='w-full h-full object-cover'/>
+            <div className='flex items-center sm:items-start gap-6 xl:gap-16 text-black mt-3 flex-col-reverse sm:flex-row '>
+              <div className='flex flex-col gap-2'>
+                  {Object.entries(item.topics).map((entr, i) => (
+                    <div key={i} className={`flex gap-2 ${i && 'mt-4'}`}>
+                      {/* <div className='bg-brand mt-[2px] rounded-md max-w-6 min-w-6 max-h-6 min-h-6 grid place-items-center text-white'>{i+1}</div> */}
+                      <div className=''>
+                        <b className='font-semibold text-xl pb-0.5 border-b-2'>{entr[0]}: </b> <br />
+                        <p className='mt-2'>{entr[1]}</p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+              
+              <div className='h-[260px] flex-shrink-0 aspect-[4/6]'>
+                <img src={item.img} alt="" className='w-full h-full object-cover'/>
+              </div>
             </div>
           </div>
+
         ))}
       </div>
     </div>
@@ -42,7 +72,7 @@ const data  = [
   {
     tite: "РЫНОК УГЛЕКИСЛОГО БАРИЯ В УЗБЕКИСТАНЕ",
     topics: {
-      "Спрос": "Узбекистан является перспективным рынком с растущим спросом на углекислый барий. Это обусловлено развитием строительной индустрии и производством керамики.",
+      "Стабильный спрос": "Узбекистан является перспективным рынком с растущим спросом на углекислый барий. Это обусловлено развитием строительной индустрии и производством керамики.",
       "Конкуренция": "На узбекском рынке в основном преобладают импортные поставки углекислого бария, однако есть и небольшие отечественные производители.",
       "Тенденции": "Узбекистан стремится увеличить долю отечественных производителей в целях импортозамещения и развития собственной промышленности.",
     },

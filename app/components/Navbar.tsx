@@ -27,11 +27,11 @@ export const Navbar = () => {
     }
   }, [])
   return (
-    <div className="fixed z-50 w-full  transition-all duration-300"
+    <div className="fixed z-50 w-full transition-all duration-300"
       style={{ backgroundColor: `${true ? '#ffffffc6' : ''}`, boxShadow: "0 8px 11px rgba(0, 0, 0, 0.04)" }}
       // style={{ backgroundColor: `${true ? 'rgb(21 21 21 / 0.6)' : ''}`, boxShadow: "0 8px 11px rgba(255, 255, 255, 0.4)" }}
     >
-      <nav className="container relative flex justify-between items-center min-h-[80px] md:max-h-[80px]">
+      <nav className="max-w-screen-2xl mx-auto px-4 relative flex justify-between items-center min-h-[80px] md:max-h-[80px]">
 
         <div className="absolute max-w-[152px] w-[10vw] min-w-[82px] z-10">
           {/* <img src={logo} alt="barico" className="w-full h-full" /> */}

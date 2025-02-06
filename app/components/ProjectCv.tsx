@@ -45,12 +45,12 @@ export const ProjectCv = () => {
         месяц, ориентированное на российский и узбекский рынки.
       </p>
 
-      <div className='mt-16 px-4 py-6 grid lg:grid-cols-12 sm:grid-cols-3 grid-cols-2 gap-x-1 gap-y-1'>
+      <div className='max-w-screen-2xl mx-auto mt-16 px-4 py-6 grid lg:grid-cols-12 sm:grid-cols-3 grid-cols-2 gap-x-1 gap-y-1'>
         {data.map((item, i) => (
           <div 
           style={{background: "rgba(238,237,237, 0.8)"}}
           key={i} 
-          className='col-item col-span-1 lg:col-span-2 relative'>
+          className=' hover:scale-95 transition-all col-item col-span-1 lg:col-span-2 relative'>
             <div className='p-3 aspect-square  grid content-center text-center overflow-hidden'>
               <span className='text-brand font-bold text-xl md:text-2xl'>
                 {item.leftSign}
