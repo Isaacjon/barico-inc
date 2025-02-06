@@ -39,7 +39,8 @@ body {
 
 .header-bg {
   /* background: url("/try-banner1.jpg") no-repeat center / cover ; */
-  background: linear-gradient(120deg, #00000099 50%, #00000099, 50%), url("/test-banner.jpg") no-repeat center / cover;
+  /* background: linear-gradient(120deg, #00000099 50%, #00000099, 50%), url("/test-banner.jpg") no-repeat center / cover; */
+  background: linear-gradient(120deg, #0009 50%, #0009), url("/test-banner.jpg") center / cover no-repeat;
 }
 
 .facilities-banner {
