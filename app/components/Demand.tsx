@@ -15,7 +15,7 @@ export const Demand = () => {
             className={`scale-100 flex flex-col bg-gray-900 shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
           >
             <div
-              className={`p-3 flex flex-col gap-4 justify-between h-full rounded-[inherit]`}
+              className={`p-3 flex flex-col gap-4 h-full rounded-[inherit]`}
             >
               <div className="h-[260px] rounded-[inherit]">
                 <img
