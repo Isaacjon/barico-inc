@@ -40,7 +40,7 @@ export const Navbar = () => {
         </div>
 
         <ul
-          className={`transition-all duration-300 absolute top-0 left-0 right-0 md:translate-y-0  w-full flex flex-col md:flex-row  gap-8 pt-16 px-[16px] md:px-[30px] md:pt-0  md:static h-screen md:h-auto md:justify-center  ${burger ? ' justify-start -translate-y-[0px] -z-10 bg-black/80 before' : '-translate-y-full '} 
+          className={`transition-all duration-300 absolute top-0 left-0 right-0 md:translate-y-0  w-full flex flex-col md:flex-row  gap-8 pt-24 px-[16px] md:px-[30px] md:pt-0  md:static h-screen md:h-auto md:justify-center  ${burger ? ' justify-start -translate-y-[0px] -z-10 bg-black/80 before' : '-translate-y-full '} 
           `}>
           {nav_menu.map((item, idx) => {
             return (
@@ -53,7 +53,7 @@ export const Navbar = () => {
                 key={item?.id}
                 className={`${activeIndex === idx ? 'activeLink' : ''} py-2 uppercase`}>
                 <a href={item.link} className="flex items-center gap-[6px]">
-                  <span className={`hover:text-brand  tracking-wider text-sm font-semibold ${activeIndex === idx ? 'text-brand' : 'text-black'}`}>{item?.text}</span>
+                  <span className={`hover:text-brand  tracking-wider text-sm font-semibold ${activeIndex === idx ? 'text-brand' : 'text-white md:text-black'}`}>{item?.text}</span>
                   {/* <img src={activeIndex === idx ? "/active-dropdown-arrow.svg" : "/dropdown-arrow.svg"} alt="dropdown_arrow" /> */}
                 </a>
               </li>

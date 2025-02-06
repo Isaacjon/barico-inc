@@ -3,7 +3,7 @@ export const Header = () => {
   return (
     <div
       id="main"
-      className="header-bg-mobile sm:header-bg relative sm:bg-left-top md:bg-center pt-[80px] min-h-screen grid place-content-center"
+      className="header-bg relative sm:bg-left-top md:bg-center pt-[80px] min-h-screen grid place-content-center"
     >
       <div className="container py-[40px] pt-[55px] h-full text-white">
         {/* subtitle */}
