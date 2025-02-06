@@ -6,29 +6,7 @@ export const Markets = () => {
     <div className='pb-24 px-4 ru-banner' id='markets'>
       {/* <h3 className='text-white text-2xl font-semibold text-center'>РЫНОК</h3> */}
 
-      <div className='max-w-screen-2xl mx-auto flex flex-col gap-6 mt-16 '>
-        {/* <div className='flex gap-6 justify-between'>
-          
-          <div className='w-1/2 flex justify-between'>
-          </div>
-
-          <div className='w-1/2 text-white flex'>
-            <div>
-              {Object.entries(data[0].topics).map((topic, i) => (
-                <div key={i} className={`flex gap-2 ml-auto ${i && 'mt-4'}`}>
-                  <div className='bg-brand rounded-md max-w-6 min-w-6 max-h-6 min-h-6 grid place-items-center'>{i+1}</div>
-                  <div>
-                    <h4 className='font-semibold text-xl'>{topic[0]}</h4>
-                    <p className='mt-2'>{topic[1]}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <img src={data[0].img} alt="" className='w-[200px] h-[300px] object-cover'/>
-          </div>
-        </div> */}
-
+      <div className='max-w-[1200px] mx-auto flex flex-col gap-6 mt-16 '>
         {data.map((item, i) => (
           <div key={i} className={`${i && 'mt-8'}`}>
             <div className='text-center text-2xl font-bold mb-4'>
