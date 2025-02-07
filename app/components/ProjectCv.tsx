@@ -45,7 +45,7 @@ export const ProjectCv = () => {
   return (
     <div className='py-24 relative custom-bg' id="cv">
       {/* <div className='gradient-bg'/> */}
-      <div
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
         viewport={{ once: true, amount: 0.5 }}
@@ -55,9 +55,9 @@ export const ProjectCv = () => {
           Производство углекислого бария (BaCO3) с объемом 150 тонн в
           месяц, ориентированное на российский и узбекский рынки.
         </p>
-      </div>
+      </motion.div>
 
-      <div  
+      <motion.div  
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.9 }}
@@ -66,7 +66,7 @@ export const ProjectCv = () => {
         {data.map((item, i) => (
           <SingleCard key={i} item={item} />
         ))}
-      </div >
+      </motion.div >
     </div>
   )
 }

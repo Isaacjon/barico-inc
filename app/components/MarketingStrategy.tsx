@@ -4,8 +4,8 @@ import { motion } from "motion/react"
 
 export const MarketingStrategy = () => {
   return (
-    <div className='ru-banner py-16 text-white' id='strategy'>
-      <div className='max-w-screen-2xl mx-auto px-4'>
+    <div className='ru-banner py-16 px-4 text-white' id='strategy'>
+      <div className='max-w-[1200px] mx-auto '>
           
           <div className='text-black text-center mb-4'>
             <h2 className='text-2xl md:text-4xl font-bold'>СТРАТЕГИЯ МАРКЕТИНГА</h2>

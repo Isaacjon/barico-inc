@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
-import { div } from "motion/react-client"
 import { useEffect, useState, } from "react"
 
 export const Navbar = () => {

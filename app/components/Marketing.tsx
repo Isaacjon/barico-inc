@@ -4,8 +4,8 @@ import { motion } from "motion/react"
 
 export const Marketing = () => {
   return (
-    <div className='bg-zinc-800 py-16 text-white'>
-      <div className='max-w-screen-2xl mx-auto px-4'>
+    <div className='bg-zinc-800 py-16 text-white px-4'>
+      <div className='max-w-[1200px] mx-auto '>
         <div className='grid md:grid-cols-2 gap-14 md:gap-4'>
           
             <motion.div
