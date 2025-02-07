@@ -10,8 +10,15 @@ const data = [
   },
   {
     title: "Телефон",
-    subtitle: "+998997766777",
-    icon: "/phone-icon.svg"
+    subtitle: "+998(99)776-67-77",
+    icon: "/phone-icon.svg",
+    link: "tel:998997766777"
+  },
+  {
+    title: "Почта",
+    subtitle: "info@barichem.com",
+    icon: "/email-icon.svg",
+    link: "mailto:info@barichem.com"
   },
 ]
 export const Contact = () => {
@@ -29,14 +36,14 @@ export const Contact = () => {
                   className="dark:invert"
                   src={item.icon}
                   alt={item.title}
-                  width={60}
-                  height={60}
+                  width={item.link === 'mailto:info@barichem.com' ? 50 : 60}
+                  height={item.link === 'mailto:info@barichem.com' ? 50 : 60}
                 />
               </div>
               <div>
                 <p className='text-2xl'>{item.title}</p>
-                <p className='text-lg max-w-screen-sm'><i>{item.subtitle?.includes("998") ? (
-                    <a href="tel: +998997766777">
+                <p className='text-lg max-w-screen-sm'><i>{item.link ? (
+                    <a href={item.link}>
                       {item.subtitle}
                     </a>
                 ) : item.subtitle}</i></p>
