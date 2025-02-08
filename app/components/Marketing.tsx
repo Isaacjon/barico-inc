@@ -18,21 +18,22 @@ export const Marketing = () => {
               <p className='text-xl md:text-2xl'>Наш продукт будет направлен на ключевых потребителей углекислого бария</p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-              viewport={{ once: true, amount: 0.6 }}
-            >
+            <div>
             {data.map((item, i)=> (
-              <div key={i} className={`flex gap-2 ${i && 'mt-4 md:mt-6'}`}>
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
+                viewport={{ once: true, amount: 0.1 }}
+                className={`flex gap-2 ${i && 'mt-4 md:mt-6'}`}>
                 {/* <div className='bg-brand mt-[2px] rounded-md max-w-6 min-w-6 max-h-6 min-h-6 grid place-items-center text-white'>{i+1}</div> */}
                 <div className=''>
                   <b className='font-semibold text-xl  pb-0.5 border-b-[0.5px]  border-zinc-400'>{item.title}: </b> <br />
                   <p className='mt-2'>{item.subtitle}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
 
         </div>
       </div>
