@@ -7,7 +7,7 @@ import React from "react";
 
 export const DemandMarkets = () => {
   return (
-    <div className="py-24 px-10" id="stats">
+    <div className="py-24 px-4 md:px-10" id="stats">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
@@ -22,9 +22,9 @@ export const DemandMarkets = () => {
         <div className="max-w-screen-2xl mx-auto mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
           {data.map((item, i) => (
             <div
-              style={{ background: "rgba(238,237,237, 0.8)" }}
+              // style={{ background: "rgba(238,237,237, 0.8)" }}
               key={i}
-              className={`scale-100 flex flex-col bg-gray-900 shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
+              className={`scale-100 flex flex-col  shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
             >
               <div
                 className={`p-3 flex flex-col gap-4 h-full rounded-[inherit]`}
@@ -35,7 +35,7 @@ export const DemandMarkets = () => {
                     src={item.img}
                   /> */}
                   <Image
-                    className="rounded-[inherit] h-full w-full"
+                    className="rounded-[inherit] h-full w-full rounded-xl"
                     src={item.img}
                     alt="Factory name"
                     width={480}

@@ -17,20 +17,20 @@ export const Demand = () => {
         <div className="max-w-screen-2xl mx-auto mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3 ">
           {data.map((item, i) => (
             <div
-              style={{ background: "rgba(238,237,237, 0.8)" }}
+              // style={{ background: "rgba(238,237,237, 0.8)" }}
               key={i}
-              className={`scale-100 flex flex-col bg-gray-900 shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
+              className={`scale-100 flex flex-col  shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025] overflow-hidden`}
             >
               <div
                 className={`p-3 flex flex-col gap-4 h-full rounded-[inherit]`}
               >
                 <div className="h-[260px] rounded-[inherit]">
                   <img
-                    className="h-full w-full object-cover rounded-[inherit]"
+                    className="h-full w-full object-cover rounded-[inherit] rounded-xl"
                     src={`/demand-${i + 1}.png`}
                   />
                 </div>
-                <p className="text-lg">{item.tite}</p>
+                <p className="text-lg font-[family-name:var(--font-poppins)]">{item.tite}</p>
               </div>
             </div>
           ))}

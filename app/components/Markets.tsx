@@ -32,7 +32,7 @@ export const Markets = () => {
                 </div>
                 
                 <div className='h-[260px] flex-shrink-0 aspect-[4/6]'>
-                  <img src={item.img} alt="" className='w-full h-full object-cover'/>
+                  <img src={item.img} alt="" className='w-full h-full object-cover rounded-xl'/>
                 </div>
               </div>
             </motion.div>
