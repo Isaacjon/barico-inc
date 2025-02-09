@@ -20,7 +20,7 @@ export const Header = () => {
           УГЛЕКИСЛОГО БАРИЯ
         </motion.h2>
 
-        <hr className="border-2 max-w-[300px] m-auto my-4 border-brand" />
+        <hr className="border-2 max-w-[150px] md:max-w-[300px] m-auto my-4 border-brand" />
 
         <motion.div 
           initial={{ opacity: 0, y: -50 }}

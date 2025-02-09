@@ -61,21 +61,23 @@ export const Navbar = () => {
               )
             })}
             <li>
-              <h1 className="md:hidden text-sm text-white whitespace-nowrap font-bold underline underline-offset-4">
-                <a href="tel: +998997766777">
-                  +998997766777
-                </a>
-              </h1>
+              <button className="max-w-max md:hidden border-none p-2 rounded-lg bg-zinc-800">
+                <h1 className="text-md text-white whitespace-nowrap font-bold">
+                  <a href="tel: +998997766777">
+                    +998997766777
+                  </a>
+                </h1>
+              </button>
             </li>
           </ul>
 
-          <div className="max-w-max hidden md:block">
-            <h1 className="text-md text-black whitespace-nowrap font-bold">
+          <button className="max-w-max hidden md:block border-none p-2 rounded-lg bg-zinc-800">
+            <h1 className="text-md text-white whitespace-nowrap font-bold">
               <a href="tel: +998997766777">
                 +998997766777
               </a>
             </h1>
-          </div>
+          </button>
 
           <div onClick={() => setBurger(!burger)} className="relative w-[35px] h-[35px] ml-auto md:hidden bg-[#f5f5f5] rounded-full grid place-items-center">
             <img className={`w-[15px] ${burger ? 'scale-150' : ''}`} src={burger ? "/close-burger.png" : "/open-burger.svg"} alt="menu opener" />

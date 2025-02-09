@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 export const Demand = () => {
   return (
-    <div className="py-10 md:py-24 px-4" id="demand">
+    <div className="pt-10 md:pt-24 px-4" id="demand">
       <motion.div
         initial={{ opacity: 0, y: 150 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}

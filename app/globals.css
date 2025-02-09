@@ -40,8 +40,8 @@ body {
 
 .header-bg {
   /* background: url("/try-banner1.jpg") no-repeat center / cover ; */
-  /* background: linear-gradient(120deg, #00000099 50%, #00000099, 50%), url("/test-banner.jpg") no-repeat center / cover; */
-  background: linear-gradient(120deg, #0009 50%, #0009), url("/test-banner.jpg") center / cover no-repeat;
+  /* background: linear-gradient(120deg, #00000099 50%, #00000099, 50%), url("/barichem-banner.jpg") no-repeat center / cover; */
+  background: linear-gradient(120deg, #0009 50%, #0009), url("/barichem-banner.jpg") center / cover no-repeat;
 }
 
 .facilities-banner {
@@ -69,7 +69,7 @@ body {
 
   .header-bg-mobile {
     background-image: url("/home-banner.png");
-    background: linear-gradient(120deg, #ffffff99 50%, #00000099, 50%), url("/test-banner.jpg");
+    background: linear-gradient(120deg, #ffffff99 50%, #00000099, 50%), url("/barichem-banner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
