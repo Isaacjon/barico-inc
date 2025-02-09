@@ -38,7 +38,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Производство BaCO3 | Высококачественный углекислый барий",
-  description: "BARICO INC. — ведущий производитель углекислого бария (BaCO3) для керамической, стекольной, строительной и химической промышленности в России и Узбекистане.",
+  description: "BARICHEM INC. — ведущий производитель углекислого бария (BaCO3) для керамической, стекольной, строительной и химической промышленности в России и Узбекистане.",
   keywords: [
     "углекислый барий",
     "производство BaCO3",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "высокочистый углекислый барий",
     "рынок BaCO3 в России",
     "BaCO3 в Узбекистане",
-    "BARICO INC."
+    "BARICHEM INC."
   ],
   openGraph: {
     title: "Производство BaCO3 | Высококачественный углекислый барий",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Производство BaCO3 | Высококачественный углекислый барий",
-    description: "BARICO INC. специализируется на производстве высокочистого углекислого бария для различных отраслей промышленности.",
+    description: "BARICHEM INC. специализируется на производстве высокочистого углекислого бария для различных отраслей промышленности.",
     images: ["https://barico-inc.netlify.app/barichem-banner.jpg", "https://barico-inc.netlify.app/demand-1.png", "https://barico-inc.netlify.app/demand-2.png", "https://barico-inc.netlify.app/demand-2.png", "https://barico-inc.netlify.app/demand-3.png", "https://barico-inc.netlify.app/demand-4.png"] // bigger photo recommended
   },
   robots: "index, follow"
