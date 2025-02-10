@@ -1,6 +1,7 @@
 export { Navbar } from "./Navbar";
 export { Header } from "./Header";
 export { ProjectCv } from "./ProjectCv";
+export { Advantages } from "./Advantages";
 export { Demand } from "./Demand";
 export { Markets } from "./Markets";
 export { Marketing } from "./Marketing";

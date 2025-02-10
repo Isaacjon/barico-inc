@@ -1,13 +1,14 @@
 // import Image from "next/image";
-import { Contact, Demand, DemandMarkets, Facilites, Header, Marketing, MarketingStrategy, Markets, Navbar, ProjectCv } from "./components";
+import { Advantages, Contact, Demand, DemandMarkets, Facilites, Header, Marketing, MarketingStrategy, Markets, Navbar, ProjectCv } from "./components";
 
 export default function Home() {
   return (
     <>
     <Navbar />
-    <main>
+    <main className="font-[family-name:var(--font-montserrat)]">
       <Header />
       <ProjectCv />
+      <Advantages />
       <Demand />
       <Markets />
       <Marketing />

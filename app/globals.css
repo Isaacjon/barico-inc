@@ -25,7 +25,9 @@ body {
 
 .custom-bg {
   background: url("https://images.unsplash.com/photo-1454117096348-e4abbeba002c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2hpdGUlMjBhYnN0cmFjdHxlbnwwfHwwfHx8MA%3D%3D") no-repeat center / cover ;
-  background-image: linear-gradient(to right bottom, rgb(255, 255, 255, 1) 30%, rgb(255, 255, 255, 0.9) 100%), url("/overlay-bg.jpg");
+  background-image: url("https://ceramitech.uz/wp-content/uploads/2022/08/bg-preimushestva.png"), linear-gradient(to right bottom, #363738 30%, #363738 100%);
+  /* background-image: linear-gradient(to right, #363738 50%, #363738 50%), url("https://ceramitech.uz/wp-content/uploads/2022/08/bg-preimushestva.png"); */
+
   /* position: absolute; */
   /* inset: 0; */
   /* background-color: #e5e5f7; */
@@ -41,7 +43,8 @@ body {
 .header-bg {
   /* background: url("/try-banner1.jpg") no-repeat center / cover ; */
   /* background: linear-gradient(120deg, #00000099 50%, #00000099, 50%), url("/barichem-banner.jpg") no-repeat center / cover; */
-  background: linear-gradient(120deg, #0009 50%, #0009), url("/barichem-banner.jpg") center / cover no-repeat;
+  background: linear-gradient(180deg, #363738b3 0%, #36373800 100%), url("/barichem-banner.jpg") center / cover no-repeat;
+  
 }
 
 .facilities-banner {

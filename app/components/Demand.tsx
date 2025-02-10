@@ -11,9 +11,6 @@ export const Demand = () => {
         viewport={{ once: true, amount: 0.1 }}
       >
         <h3 className="text-brand text-2xl font-semibold text-center">Спрос</h3>
-        {/* <p className='text-black text-2xl font-semibold text-center max-w-[700px] mx-auto mt-5 '>
-          Доказанная привлекательность: Рынок требует  нашу продукцию 
-        </p> */}
         <div className="max-w-screen-2xl mx-auto mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3 ">
           {data.map((item, i) => (
             <div
