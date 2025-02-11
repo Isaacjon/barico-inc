@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { Advantages, Contact, Demand, DemandMarkets, Facilites, Header, Marketing, MarketingStrategy, Markets, Navbar, ProjectCv } from "./components";
+import { AboutCompany, Advantages, Contact, Demand, DemandMarkets, Facilites, Header, Marketing, MarketingStrategy, Markets, Navbar, Products, ProjectCv } from "./components";
 
 export default function Home() {
   return (
@@ -9,6 +9,9 @@ export default function Home() {
       <Header />
       <ProjectCv />
       <Advantages />
+      <AboutCompany />
+      <Products />
+
       <Demand />
       <Markets />
       <Marketing />

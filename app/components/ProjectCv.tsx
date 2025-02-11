@@ -4,7 +4,7 @@ export const ProjectCv = () => {
 
   return (
     <div className="bg-white text-[#2d2a26] pt-[7vh] overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto px-4">
+      <div className="container">
         {data.map((item, i, arr) => (
           <div key={item.title} className={`grid grid-cols-1 md:grid-cols-2 md:order-2 ${(i === arr.length - 1) ? '' : 'mb-[10vh]'}`}>
             

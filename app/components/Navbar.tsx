@@ -33,7 +33,7 @@ export const Navbar = () => {
     <div className="relative w-full max-w-[100vw]">
       <div className={headerClass}
       >
-        <nav className="max-w-screen-2xl mx-auto px-4 relative flex justify-between items-center min-h-[74px] md:max-h-[74px]">
+        <nav className="container relative flex justify-between items-center min-h-[74px] md:max-h-[74px]">
 
           <div className="max-w-max">
             {/* <img src={logo} alt="barico" className="w-full h-full" /> */}

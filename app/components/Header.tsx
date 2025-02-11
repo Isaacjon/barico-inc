@@ -11,7 +11,7 @@ export const Header = () => {
       className="header-bg relative sm:bg-left-top md:bg-center pt-[15vh] pb-[5.5vh] h-screen "
     >
       <div
-        className="max-w-screen-2xl mx-auto px-4 h-full text-white flex flex-col">
+        className="container h-full text-white flex flex-col">
         {/* subtitle */}
         <motion.h2 
             initial={{ opacity: 0, y: 50 }}

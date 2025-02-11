@@ -6,7 +6,7 @@ import Image from "next/image"
 export const Advantages = () => {
   return (
       <div className='custom-bg p-[7vh_0_5vh] md:p-[13vh_0] ' id="cv">
-        <div className="max-w-screen-2xl mx-auto px-4">
+        <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
