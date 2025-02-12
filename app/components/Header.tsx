@@ -1,41 +1,47 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import Image from "next/image";
 
 export const Header = () => {
-
   return (
     <div
       id="main"
       className="header-bg relative sm:bg-left-top md:bg-center pt-[15vh] pb-[5.5vh] h-screen "
     >
-      <div
-        className="container h-full text-white flex flex-col">
+      <div className="container h-full text-white flex flex-col">
         {/* subtitle */}
-        <motion.h2 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        className="leading-[1.2] text-[36px] sm:text-[63px] text-center font-black">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          className="leading-[1.2] text-[30px] sm:text-[63px] text-center font-black overflow-hidden"
+        >
           ПРОИЗВОДСТВО УГЛЕКИСЛОГО БАРИЯ
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4 mt-auto">
-          {data.map(item => (
-            <div key={item.title} className="p-[2.5vh] bg-white flex items-center gap-[2.5vh]">
+        <motion.h2
+          initial={{ opacity: 0, y: 250 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4 mt-auto"
+        >
+          {data.map((item) => (
+            <div
+              key={item.title}
+              className="p-[2.5vh] bg-white flex items-center gap-[2.5vh]"
+            >
               <div className="min-w-[51.60px]">
                 <Image
                   className=""
                   src={item.img}
                   alt="product image"
-                  width={51.60}
-                  height={51.60}
+                  width={51.6}
+                  height={51.6}
                 />
               </div>
-                <p className="text-[#2d2a26] text-[1.5vh]">{item.title}</p>
+              <p className="text-[#2d2a26] text-[1.5vh]">{item.title}</p>
             </div>
           ))}
-        </div>
+        </motion.h2>
 
         {/* <hr className="border-2 max-w-[150px] md:max-w-[300px] m-auto my-4 border-brand" /> */}
 
@@ -73,19 +79,20 @@ export const Header = () => {
 
 const data = [
   {
-    title: "Один из крупнейших заводов керамического и облицовочного кирпича в центральной Азии",
-    img: "/banner-icons/card-icon-1.svg"
+    title:
+      "Один из крупнейших заводов керамического и облицовочного кирпича в центральной Азии",
+    img: "/banner-icons/card-icon-1.svg",
   },
   {
     title: "Полностью автоматизированное производство",
-    img: "/banner-icons/card-icon-2.svg"
+    img: "/banner-icons/card-icon-2.svg",
   },
   {
     title: "Европейское оборудование от мировых производителей",
-    img: "/banner-icons/card-icon-3.svg"
+    img: "/banner-icons/card-icon-3.svg",
   },
   {
     title: "Производительность – более 80 миллионов кирпичей в год!",
-    img: "/banner-icons/card-icon-4.svg"
+    img: "/banner-icons/card-icon-4.svg",
   },
-]
+];

@@ -1,86 +1,92 @@
 import Image from 'next/image'
 import React from 'react'
 
-
 const data = [
   {
-    title: "Адрес",
+    title: "Адрес производства",
     subtitle: "Ташкентская область, Ахангаранский район, ТУТ мфй, улица Бунёдкор, дом 334",
-    icon: "/location-icon.svg"
+    icon: "https://ceramitech.uz/wp-content/uploads/2022/08/location.svg"
   },
   {
-    title: "Телефон",
+    title: "Юридический адрес",
+    subtitle: "Республика Узбекистан, Ферганская область, Узбекистанский район, городок Шурсув",
+    icon: "https://ceramitech.uz/wp-content/uploads/2022/08/location.svg"
+  },
+  {
+    title: "Телефон офиса продаж",
     subtitle: "+998(99)776-67-77",
-    icon: "/phone-icon.svg",
+    icon: "https://ceramitech.uz/wp-content/uploads/2022/08/call.svg",
     link: "tel:998997766777"
   },
-  {
-    title: "Почта",
-    subtitle: "info@barichem.com",
-    icon: "/email-icon.svg",
-    link: "mailto:info@barichem.com"
-  },
+  // {
+  //   title: "Почта",
+  //   subtitle: "info@barichem.com",
+  //   icon: "/email-icon.svg",
+  //   link: "mailto:info@barichem.com"
+  // },
 ]
 export const Contact = () => {
   return (
-    <div className='bg-zinc-800 text-white py-8 px-4 pb-6'>
-      <h3 className="text-4xl font-semibold text-center mb-10">
-        Контакты
-      </h3>
-      <div className='max-w-[1200px] mx-auto flex justify-between gap-10 md:gap-3 flex-col md:flex-row'>
-        <div>
+    <div className='relative leading-[150%] text-[#2d2a26]  bg-white p-[7vh_0_5vh] border-t-[1px] border-[#D9D9D9]'>
+      <div className='container grid grid-cols-1 md:grid-cols-2'>
+        <div className='md:pr-4'>
+          <h3 className="text-[3.2vh] font-bold mb-[5vh]">
+            Контакты
+          </h3>
           {data.map((item, i) => (
-            <div key={i} className={`flex gap-3 ${i && 'mt-10'}`}>
-              <div className='grid place-content-center min-w-[40px] max-w-[40px] md:max-w-max md:min-w-[60px] aspect-square'>
+            <div key={i} className={`flex items-start gap-3 ${i && 'mt-10'}`}>
+              <div className='grid place-content-center min-w-[48px] max-w-[48px] md:max-w-max md:min-w-[48px] aspect-square'>
                 <Image
-                  className="dark:invert"
+                  className=""
                   src={item.icon}
                   alt={item.title}
-                  width={item.link === 'mailto:info@barichem.com' ? 50 : 60}
-                  height={item.link === 'mailto:info@barichem.com' ? 50 : 60}
+                  width={48}
+                  height={48}
                 />
               </div>
               <div>
-                <p className='text-2xl'>{item.title}</p>
-                <p className='text-lg max-w-screen-sm'><i>{item.link ? (
+                <p className='text-[1.4vh] font-medium text-brand'>{item.title}</p>
+                <p className='text-[1.6vh] font-semibold mt-[0.8vh]'>{item.link ? (
                     <a href={item.link}>
                       {item.subtitle}
                     </a>
-                ) : item.subtitle}</i></p>
+                ) : item.subtitle}</p>
               </div>
             </div>
           ))}
-          <h1 className="max-w-fit mt-10 p-2 rounded-lg bg-[#ff510080] shadow-customShadow flex justify-center gap-2 ">
-            <span
-              className={`text-stroke-white font-semibold font-[family-name:var(--font-poppins)] text-brand text-4xl`}
-            >
-              BARICHEM
-            </span>
 
-            <span className="inline-flex flex-col justify-start items-start self-center">
-              <span
-                className={`font-[family-name:var(--font-poppins)] font-medium text-transparent tracking-normal text-stroke-white text-2xl`}
-              >
-                INC.
-              </span>
-            </span>
-          </h1>
+          <div className='flex mt-[7vh]'>
+            <div className='p-[10px] grid place-content-center'>
+              <Image
+                className=""
+                src="https://ceramitech.uz/wp-content/uploads/2024/01/post-1.png"
+                alt="albus"
+                width={164}
+                height={57}
+              />
+            </div>
+            <div className='p-[10px] grid place-content-center ml-[30px]'>
+            <Image
+              className=""
+              src="https://ceramitech.uz/wp-content/uploads/2022/08/sticky-logo.svg"
+              alt="albus"
+              width={134}
+              height={32}
+            />
+            
+            </div>
+          </div>
         </div>
 
-        <div className='w-full md:w-[400px] md:max-w-[50%] overflow-hidden rounded'>
+        <div className='mt-[5vh] md:mt-0 border md:absolute top-0 bottom-0 right-0 md:w-6/12 h-[76vh] md:h-full'>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.5633316969765!2d69.2023099117653!3d41.27484270284871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a3d32fd18b5%3A0xab5f80ce6aeaa081!2sBunyodkor%20Avenue%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1738853173804!5m2!1sen!2s" 
-            width="600" 
-            height="300" 
-            className='w-full h-full max-h-[350px] min-h-[250px] '
+            className='w-full h-full'
             allowFullScreen 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
           >
           </iframe>
         </div>
-      </div>
-      <div className='max-w-[1200px] mx-auto border-t-[0.5px] border-white mt-14 text-center'>
-        <p className='text-sm mt-5'>2025</p>
       </div>
     </div>
   )

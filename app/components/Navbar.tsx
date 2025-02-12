@@ -26,14 +26,14 @@ export const Navbar = () => {
 
 
   const headerClass = `
-  font-[family-name:var(--font-montserrat)] fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${visible ? 'bg-white text-black' : 'text-white'}
+  font-[family-name:var(--font-montserrat)] fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${visible ? 'bg-white text-black shadow-[0_0_3px_0_rgba(0,0,0,.06)]' : 'text-white'}
   `
 
   return (
     <div className="relative w-full max-w-[100vw]">
       <div className={headerClass}
       >
-        <nav className="container relative flex justify-between items-center min-h-[74px] md:max-h-[74px]">
+        <nav className=" container relative flex justify-between items-center min-h-[74px] md:max-h-[74px]">
 
           <div className="max-w-max">
             {/* <img src={logo} alt="barico" className="w-full h-full" /> */}

@@ -38,7 +38,7 @@ export const AboutCompany = () => {
                   Ceramitech Group
                 </h3>
 
-                <button className=" bg-brand font-bold text-white border-none py-[13px] px-[25px]" >
+                <button className="m-[5vh_0_7vh] md:m-0 bg-brand font-bold text-white border-none py-[13px] px-[25px]" >
                   подробно
                 </button>
               </motion.div>

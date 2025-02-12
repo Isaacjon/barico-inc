@@ -1,5 +1,15 @@
 // import Image from "next/image";
-import { AboutCompany, Advantages, Contact, Demand, DemandMarkets, Facilites, Header, Marketing, MarketingStrategy, Markets, Navbar, Products, ProjectCv } from "./components";
+import { 
+  AboutCompany, 
+  Advantages, 
+  Contact, 
+  Header, 
+  LeaveRequest, 
+  Navbar, 
+  Products, 
+  ProjectCv,
+  // Marketing, MarketingStrategy, Markets,  Demand, DemandMarkets, Facilites, 
+} from "./components";
 
 export default function Home() {
   return (
@@ -11,13 +21,14 @@ export default function Home() {
       <Advantages />
       <AboutCompany />
       <Products />
+      <LeaveRequest />
 
-      <Demand />
+      {/* <Demand />
       <Markets />
       <Marketing />
       <MarketingStrategy />
       <Facilites />
-      <DemandMarkets />
+      <DemandMarkets /> */}
       <Contact />
     </main>
       {/* <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">

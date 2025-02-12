@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image"
+
+import { motion } from "motion/react";
 
 export const ProjectCv = () => {
 
@@ -6,8 +9,13 @@ export const ProjectCv = () => {
     <div className="bg-white text-[#2d2a26] pt-[7vh] overflow-hidden">
       <div className="container">
         {data.map((item, i, arr) => (
-          <div key={item.title} className={`grid grid-cols-1 md:grid-cols-2 md:order-2 ${(i === arr.length - 1) ? '' : 'mb-[10vh]'}`}>
-            
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={`grid grid-cols-1 md:grid-cols-2 md:order-2 ${(i === arr.length - 1) ? '' : 'mb-[10vh]'}`}
+          >
             <div className={`${i % 2 === 0 ? '' : 'md:order-2'}`}>
               <h3 className="leading-[130%] text-[3.2vh] font-bold mb-[1.5vh] sm:mb-0">
                 <b className="text-[1.8vh] font-semibold text-brand">Ceramitech Group</b>
@@ -56,7 +64,7 @@ export const ProjectCv = () => {
                   height={400}
               />
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
