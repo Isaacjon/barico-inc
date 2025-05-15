@@ -2,6 +2,11 @@
 
 const products = [
   {
+    name: 'Barium Carbonate',
+    image: '/product-images/bari_car.png',
+    description: '',
+  },
+  {
     name: 'Sodium Sulfide',
     image: '/product-images/bari_sul.png', // Replace with actual path or imported image
     description: '',
@@ -9,11 +14,6 @@ const products = [
   {
     name: 'Barium Chloride',
     image: '/product-images/bari_clor.png',
-    description: '',
-  },
-  {
-    name: 'Barium Carbonate',
-    image: '/product-images/bari_car.png',
     description: '',
   }
 ];
