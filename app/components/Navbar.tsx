@@ -56,9 +56,24 @@ export const Navbar = () => {
                 </a>
               </h1>
             </button>
+            <button className="max-w-max flex items-center gap-4  border-none p-2 rounded-lg">
+              <Image
+                className={`${visible ? '' : 'invert'} "dark:invert -mb-1"`}
+                src="/phone-icon.svg"
+                alt="phone icon"
+                width={30}
+                height={30}
+              />
+              
+              <h1 className="text-lg text-inherit whitespace-nowrap font-bold underline underline-offset-[6px]">
+                <a href="tel: +998990329990">
+                  +998 (99) 032-99-90
+                </a>
+              </h1>
+            </button>
 
             <button className=" bg-brand font-bold text-white border-none py-[13px] px-[25px] rounded-[5vh]
-            shadow-[0px_5px_30px_rgba(255,81,0,0.61)]
+            shadow-[0px_5px_30px_rgba(83,116,175,0.61)]
             ">
               Заказать звонок
             </button>

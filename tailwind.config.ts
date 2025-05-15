@@ -23,13 +23,13 @@ export default {
         },
         black: "#000",
         dark: "#333",
-        brand: "#ff561d", //"#F28705", // || "#024959" || "#702DE3",
+        brand: "#5474b0",
         transparent: "transparent",
         'semi-transparent-white': 'rgba(255, 255, 255, 0.11)',
         'semi-transparent-black': 'rgba(0, 0, 0, 0.51)',
       },
       boxShadow: {
-        customShadow: "0px 5px 30px #ff51009c"
+        customShadow: "0px 5px 30px #5474b040"
       }
     },
   },

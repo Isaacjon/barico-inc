@@ -52,7 +52,7 @@ export const ProjectCv = () => {
                 />
               </div>
              
-              <div className={`absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-[1] rounded-[50%] w-[35vh] h-[35vh] ${i % 2 === 0 ? 'bg-[#FF5100]' : 'bg-[#2B2E37]'}`} />
+              <div className={`absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-[1] rounded-[50%] w-[35vh] h-[35vh] ${i % 2 === 0 ? 'bg-[#082363]' : 'bg-[#2B2E37]'}`} />
               <Image
                   className={`
                     h-[25vh] w-[25vh] md:h-[36vh] md:w-[36vh] object-contain absolute 

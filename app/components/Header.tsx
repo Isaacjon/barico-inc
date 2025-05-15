@@ -2,76 +2,46 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useEffect, useState} from "react";
 
 export const Header = () => {
+  const [bgImage, setBgSlider] = useState('/bg_img_2.jpg');
+
+  const changeBackgroundInEverySeconds = () => {
+    const images = [
+      '/bg_img_2.jpg',
+      '/bg_img.jpg'
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+      setBgSlider(images[index]);
+      index = (index + 1) % images.length;
+    }, 5000);
+  }
+
+  useEffect(() => {
+    changeBackgroundInEverySeconds();
+  }, [])
+  
   return (
     <div
       id="main"
-      className="header-bg relative sm:bg-left-top md:bg-center pt-[15vh] pb-[5.5vh] h-screen "
+      className={`duration-1000 transition-all relative sm:bg-left-top md:bg-center pt-[15vh] pb-[5.5vh] h-screen`}
+      style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}
+
     >
-      <div className="container h-full text-white flex flex-col">
+      <div className="container h-full text-white flex flex-col justify-center">
         {/* subtitle */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-          className="leading-[1.2] text-[30px] sm:text-[63px] text-center font-black overflow-hidden"
+          className="leading-[1.2] text-[30px] sm:text-[42px] text-center font-black overflow-hidden my-auto"
         >
-          ПРОИЗВОДСТВО УГЛЕКИСЛОГО БАРИЯ
+          Улучшение отраслей промышленности с помощью специализированных продуктов на основе бария.
         </motion.h2>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 250 }}
-          animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-          className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4 mt-auto"
-        >
-          {data.map((item) => (
-            <div
-              key={item.title}
-              className="p-[2.5vh] bg-white flex items-center gap-[2.5vh]"
-            >
-              <div className="min-w-[51.60px]">
-                <Image
-                  className=""
-                  src={item.img}
-                  alt="product image"
-                  width={51.6}
-                  height={51.6}
-                />
-              </div>
-              <p className="text-[#2d2a26] text-[1.5vh]">{item.title}</p>
-            </div>
-          ))}
-        </motion.h2>
-
-        {/* <hr className="border-2 max-w-[150px] md:max-w-[300px] m-auto my-4 border-brand" /> */}
-
-        {/* <motion.div 
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-          className="flex flex-col items-center justify-center m-auto"
-        >
-          <div className="relative w-full px-6">
-            <div className="bg-brand h-5/6 w-[3px] absolute top-[50%] -translate-y-1/2"></div>
-            <p className="text-center font-[family-name:var(--font-montserrat)] pl-4 text-2xl md:leading-normal  md:text-[40px] font-medium w-full ">
-              Перспективный бизнес с высокой рентабельностью
-            </p>
-          </div>
-          <h1 className="mt-4 p-2 md:px-6 rounded-lg md:rounded-3xl bg-[#ff510080] shadow-customShadow text-xl text-center flex justify-center gap-2 ">
-            <span
-              className={`text-stroke-white font-semibold font-[family-name:var(--font-poppins)] leading-[100%] 2xl:leading-[130%] text-brand text-[34px] md:text-[60px] 2xl:text-[80px]`}
-            >
-              BARICHEM
-            </span>
-
-            <span className="inline-flex flex-col justify-start items-start self-center">
-              <span
-                className={`font-[family-name:var(--font-poppins)] font-medium text-transparent tracking-normal text-stroke-white md:text-stroke-white-2 text-2xl md:text-[50px] 2xl:text-[60px]`}
-              >
-                INC.
-              </span>
-            </span>
-          </h1>
-        </motion.div> */}
+        {/* title */}
       </div>
     </div>
   );

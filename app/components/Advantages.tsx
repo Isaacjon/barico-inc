@@ -5,31 +5,18 @@ import Image from "next/image"
 
 export const Advantages = () => {
   return (
-      <div className='custom-bg p-[7vh_0_5vh] md:p-[13vh_0] ' id="cv">
-        <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          <h3 className="text-white leading-[130%] text-[3.2vh] font-bold mb-[5vh]">
-            <b className="text-[1.8vh] font-semibold text-brand">Ceramitech Group</b>
-            <br />
-            Преимущества
-          </h3>
-        </motion.div>
-
-        <motion.div  
-        initial={{ opacity: 0, y: 150 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true, amount: 0.1 }}
-          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5  gap-[20px]'
-        >
-          {data.map((item, i) => (
-            <SingleCard key={i} item={item} />
-          ))}
-        </motion.div >
+    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+    <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-1.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </div>
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-2.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-3.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+    </div>
     </div>
   )
 }

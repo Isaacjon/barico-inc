@@ -12,7 +12,7 @@
   :root {
     /* --background: #0a0a0a; */
     /* --foreground: #ededed; */
-    /* color: #ff51009c; */
+    /* color: #0823639c; */
   }
 }
 
@@ -40,10 +40,16 @@ body {
   background-image: linear-gradient(to right bottom, rgb(255, 255, 255, 1) 30%, rgb(255, 255, 255, 0.9) 100%), url("/overlay-bg.jpg");
 }
 
-.header-bg {
-  /* background: url("/try-banner1.jpg") no-repeat center / cover ; */
-  /* background: linear-gradient(120deg, #00000099 50%, #00000099, 50%), url("/barichem-banner.jpg") no-repeat center / cover; */
-  background: linear-gradient(180deg, #363738b3 0%, #36373800 100%), url("/barichem-banner.jpg") center / cover no-repeat;
+.header-bg-0 {
+  background: linear-gradient(180deg, #363738b3 0%, #36373800 100%), url("/bg_img.jpg") center / cover no-repeat;
+  
+}
+.header-bg-1 {
+  background: linear-gradient(180deg, #363738b3 0%, #36373800 100%), url("/product-images/bari_clor.png") center / cover no-repeat;
+  
+}
+.header-bg-2 {
+  background: linear-gradient(180deg, #363738b3 0%, #36373800 100%), url("/product-images/bari_sul.png") center / cover no-repeat;
   
 }
 
