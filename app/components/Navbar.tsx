@@ -72,7 +72,7 @@ export const Navbar = () => {
               </h1>
             </button>
 
-            <button className=" bg-brand font-bold text-white border-none py-[13px] px-[25px] rounded-[5vh]
+            <button className=" bg-brandLight font-bold text-white border-none py-[13px] px-[25px] rounded-[5vh]
             shadow-[0px_5px_30px_rgba(83,116,175,0.61)]
             ">
               Заказать звонок
