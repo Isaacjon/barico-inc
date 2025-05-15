@@ -69,7 +69,7 @@ export const Contact = () => {
               />
 
             </div>
-            <span className='p-[0px] text-end'>All rights are reserved. Barichem - { new Date().getFullYear()}</span>
+            <span className='p-[0px] text-end'>Все права защищены.. Barichem - { new Date().getFullYear()}</span>
           </div>
         </div>
 
