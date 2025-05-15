@@ -3,27 +3,22 @@ import React from 'react'
 
 const data = [
   {
-    title: "Адрес производства",
+    title: "Адрес",
     subtitle: "Ташкентская область, Ахангаранский район, ТУТ мфй, улица Бунёдкор, дом 334",
     icon: "https://ceramitech.uz/wp-content/uploads/2022/08/location.svg"
   },
   {
-    title: "Юридический адрес",
-    subtitle: "Республика Узбекистан, Ферганская область, Узбекистанский район, городок Шурсув",
-    icon: "https://ceramitech.uz/wp-content/uploads/2022/08/location.svg"
+    title: "Почта",
+    subtitle: "info@barichem.com",
+    icon: "/email-icon.svg",
+    link: "mailto:info@barichem.com"
   },
   {
-    title: "Телефон офиса продаж",
+    title: "Телефон",
     subtitle: "+998(99)776-67-77",
     icon: "https://ceramitech.uz/wp-content/uploads/2022/08/call.svg",
     link: "tel:998997766777"
-  },
-  // {
-  //   title: "Почта",
-  //   subtitle: "info@barichem.com",
-  //   icon: "/email-icon.svg",
-  //   link: "mailto:info@barichem.com"
-  // },
+  }
 ]
 
 export const Contact = () => {
@@ -41,7 +36,7 @@ export const Contact = () => {
                 <a
                   href={item.link}
                   key={index}
-                  className='flex items-center gap-[2vh] p-[2vh] transition-shadow'
+                  className='flex items-center transition-shadow'
                 >
                   {/* <Image
                     src={item.icon}
