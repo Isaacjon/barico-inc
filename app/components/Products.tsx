@@ -22,7 +22,7 @@ const products = [
   return (
     <div className=" bg-white p-8">
       <h2 className="text-3xl font-bold text-center mb-8">Что мы предлагаем ?</h2>
-      <div className="grid grid-cols-3 grid-rows-2 gap-8 w-3/5 mx-auto">
+      <div className="grid grid-cols-3 grid-rows-2 gap-8 w-2/5 mx-auto">
         {products.map((product, idx) => (
           idx === 0 ? (<>
           <div
