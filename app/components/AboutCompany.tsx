@@ -70,7 +70,7 @@ export const AboutCompany = () => {
                   height={601}
                 />
 
-                <div className=" z-[3] absolute right-[-7%] sm:right-[-8%] top-[-7%] sm:top-[-10vh] w-[13vh] h-[13vh] border-[1vh] border-brand" />
+                <div className="hidden sm:block z-[3] absolute right-[-7%] sm:right-[-8%] top-[-7%] sm:top-[-10vh] w-[13vh] h-[13vh] border-[1vh] border-brand" />
                 <div className="hidden sm:block z-[1] absolute left-[14vh] bottom-[-10vh] w-[20vh] h-[18vh] border-[1vh] border-brand" />
               </div>
             </div>

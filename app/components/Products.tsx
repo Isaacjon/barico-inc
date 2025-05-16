@@ -22,12 +22,12 @@ const products = [
   return (
     <div className=" bg-white p-8">
       <h2 className="text-3xl font-bold text-center mb-8">Что мы предлагаем ?</h2>
-      <div className="grid grid-cols-3 grid-rows-2 gap-8 w-2/5 mx-auto">
+      <div className="sm:flex sm:flex-wrap md:grid md:grid-cols-3 md:grid-rows-2 md:gap-8 md:w-2/5 mx-auto">
         {products.map((product, idx) => (
           idx === 0 ? (<>
           <div
           key={idx + product.image}
-          className="flex flex-col col-span-2 row-span-2 items-center bg-white shadow hover:shadow-lg transition-shadow cursor-pointer"
+          className="flex flex-col md:col-span-2 md:row-span-2 items-center bg-white shadow hover:shadow-lg transition-shadow cursor-pointer"
           onClick={() => window.open('/protocol.pdf', '_blank')}
         >
           <img
@@ -46,7 +46,7 @@ const products = [
         </div>
           </>) : <div
           key={idx}
-          className="flex flex-col col-start-3 items-center bg-white shadow hover:shadow-lg transition-shadow"
+          className="flex flex-col md:col-start-3 items-center bg-white shadow hover:shadow-lg transition-shadow my-10"
         >
           <img
             src={product.image}
