@@ -27,7 +27,8 @@ const products = [
           idx === 0 ? (<>
           <div
           key={idx + product.image}
-          className="flex flex-col col-span-2 row-span-2 items-center bg-white shadow hover:shadow-lg transition-shadow"
+          className="flex flex-col col-span-2 row-span-2 items-center bg-white shadow hover:shadow-lg transition-shadow cursor-pointer"
+          onClick={() => window.open('/protocol.pdf', '_blank')}
         >
           <img
             src={product.image}

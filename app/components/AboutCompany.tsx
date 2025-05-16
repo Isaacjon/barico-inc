@@ -64,10 +64,10 @@ export const AboutCompany = () => {
               <div className="relative flex-1 text-center sm:text-right">
                 <Image
                   className="w-full max-w-[376px] inline-block relative z-[2]"
-                  src="https://ceramitech.uz/wp-content/uploads/2022/08/about-photo-1.jpg"
+                  src="/process_making.png"
                   alt="image"
-                  width={476}
-                  height={501}
+                  width={576}
+                  height={601}
                 />
 
                 <div className=" z-[3] absolute right-[-7%] sm:right-[-8%] top-[-7%] sm:top-[-10vh] w-[13vh] h-[13vh] border-[1vh] border-brand" />
