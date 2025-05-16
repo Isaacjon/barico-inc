@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState} from "react";
 
-export const Header = () => {
+export const Header = ({ height = '' }) => {
   const [bgImage, setBgSlider] = useState('/bg_img_2.jpg');
 
   const changeBackgroundInEverySeconds = () => {

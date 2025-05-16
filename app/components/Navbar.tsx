@@ -3,8 +3,8 @@
 import Image from "next/image"
 import { useEffect, useState, } from "react"
 
-export const Navbar = () => {
-  const [visible, setVisible] = useState(false)
+export const Navbar = ({ visibleDefault = false }) => {
+  const [visible, setVisible] = useState(visibleDefault)
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -12,6 +12,10 @@ export const Navbar = () => {
     if (scrolled > 74) {
       setVisible(true);
     } else if (scrolled <= 74) {
+      if (visibleDefault) {
+        setVisible(true);
+        return
+      }
       setVisible(false);
     }
   };
