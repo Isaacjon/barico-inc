@@ -16,6 +16,7 @@ const data = [
   {
     title: "Телефон",
     subtitle: "+998(99)776-67-77",
+    subtitle2: "+998(99)032-99-90",
     icon: "https://ceramitech.uz/wp-content/uploads/2022/08/call.svg",
     link: "tel:998997766777"
   }
@@ -33,22 +34,28 @@ export const Contact = () => {
           <div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[5vh]'>
               {data.map((item, index) => (
-                <a
+                index == 2 ? <><a
+                href={item.link}
+                key={index}
+                className='flex items-center transition-shadow'
+              >
+                <div className='flex gap-2 flex-col'>
+                  <h4 className='text-31px font-bold'>{item.title}</h4>
+                  <p className='text-22px'>{item.subtitle}</p>
+                  <p className='text-22px'>{item.subtitle2}</p>
+                </div>
+              </a></> : <>
+              <a
                   href={item.link}
                   key={index}
                   className='flex items-center transition-shadow'
                 >
-                  {/* <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={24}
-                    height={24}
-                  /> */}
                   <div>
                     <h4 className='text-31px font-bold'>{item.title}</h4>
                     <p className='text-22px'>{item.subtitle}</p>
                   </div>
                 </a>
+                </>
               ))}
             </div>
           </div>
@@ -64,7 +71,7 @@ export const Contact = () => {
               />
 
             </div>
-            <span className='p-[0px] text-end'>Все права защищены.. Barichem - { new Date().getFullYear()}</span>
+            <span className='p-[0px] text-end'>Все права защищены. Barichem - { new Date().getFullYear()}</span>
           </div>
         </div>
 

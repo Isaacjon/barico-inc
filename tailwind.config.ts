@@ -23,7 +23,7 @@ export default {
         },
         black: "#000",
         dark: "#333",
-        brand: "#5474b0",
+        brand: "#082363",
         brandLight: "#1b68f7",
         transparent: "transparent",
         'semi-transparent-white': 'rgba(255, 255, 255, 0.11)',

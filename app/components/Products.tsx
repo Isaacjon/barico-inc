@@ -15,7 +15,7 @@ const products = [
     description: '',
     styleCss: '',
     clickOur: () => null,
-    imgCss: 'blur-sm'
+    imgCss: ''
   },
   {
     name: 'Скоро...',
@@ -23,7 +23,7 @@ const products = [
     description: '',
     styleCss: 'col-start-2 row-start-2',
     clickOur: () => null,
-    imgCss: 'blur-sm'
+    imgCss: ''
 
   }
 ];
