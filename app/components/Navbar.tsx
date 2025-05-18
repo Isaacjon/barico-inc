@@ -39,9 +39,9 @@ export const Navbar = ({ visibleDefault = false }) => {
       >
         <nav className=" container relative flex justify-between items-center min-h-[74px] md:max-h-[74px]">
 
-          <div className="max-w-max">
+          <div className="max-w-max" onClick={() => window.open('/', '_self')}>
             {/* <img src={logo} alt="barico" className="w-full h-full" /> */}
-            <h1 className="text-md text-inherit whitespace-nowrap font-bold">BARICHEM INC.</h1>
+            <h1 className="text-md text-inherit whitespace-nowrap font-bold cursor-pointer">BARICHEM INC.</h1>
           </div>
 
           <div className="hidden sm:flex items-center gap-6">
