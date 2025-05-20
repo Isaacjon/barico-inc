@@ -34,7 +34,8 @@ export const Contact = () => {
           <div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[5vh]'>
               {data.map((item, index) => (
-                index == 2 ? <><a
+                index == 2 ? <div key={item.link + '' + index}
+                ><a
                 href={item.link}
                 key={index}
                 className='flex items-center transition-shadow'
@@ -44,7 +45,7 @@ export const Contact = () => {
                   <p className='text-22px'>{item.subtitle}</p>
                   <p className='text-22px'>{item.subtitle2}</p>
                 </div>
-              </a></> : <>
+              </a></div> : <div key={item.link}>
               <a
                   href={item.link}
                   key={index}
@@ -55,18 +56,18 @@ export const Contact = () => {
                     <p className='text-22px'>{item.subtitle}</p>
                   </div>
                 </a>
-                </>
+                </div>
               ))}
             </div>
           </div>
 
           <div className='flex mt-10 justify-between items-end'>
-            <div className='p-[0px]'>
+            <div className='p-[0px] w-[264px]'>
               <Image
-                className=""
                 src="/logo.svg"
-                alt="albus"
+                alt="Logo of Barichem"
                 width={264}
+                style={{ height: "auto", width: "100%" }} 
                 height={57}
               />
 
