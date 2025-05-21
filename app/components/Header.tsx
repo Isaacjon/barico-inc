@@ -1,38 +1,67 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
-import { useEffect, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const Header = ({ height = '' }) => {
-  const [bgImage, setBgSlider] = useState('/bg_img_2.jpg');
+const images = [
+  "/bg_img_2.jpg",
+  "/bg_img.jpg"
+];
 
-  const changeBackgroundInEverySeconds = () => {
-    const images = [
-      '/bg_img_2.jpg',
-      '/bg_img.jpg'
-    ];
+export const Header = () => {
+  const [current, setCurrent] = useState(0);
+  const [loaded, setLoaded] = useState([false, false]);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    let index = 0;
-
-    setInterval(() => {
-      setBgSlider(images[index]);
-      index = (index + 1) % images.length;
-    }, 5000);
-  }
-
+  // Preload images
   useEffect(() => {
-    changeBackgroundInEverySeconds();
-  }, [])
-  
+    images.forEach((src, idx) => {
+      const img = new window.Image();
+      img.src = src;
+      img.onload = () => {
+        setLoaded((prev) => {
+          const updated = [...prev];
+          updated[idx] = true;
+          return updated;
+        });
+      };
+    });
+  }, []);
+
+  // Change background every 5s, only if both images are loaded
+  useEffect(() => {
+    if (loaded.every(Boolean)) {
+      intervalRef.current = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % images.length);
+      }, 5000);
+      return () => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+      };
+    }
+  }, [loaded]);
+
   return (
     <div
       id="main"
-      className={`duration-1000 transition-all relative sm:bg-left-top md:bg-center pt-[15vh] pb-[5.5vh] h-screen`}
-      style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}
-
+      className={`relative sm:bg-left-top md:bg-center pt-[15vh] pb-[5.5vh] h-screen overflow-hidden`}
+      style={{ position: "relative" }}
     >
-      <div className="container h-full text-white flex flex-col justify-center">
+      {/* Backgrounds */}
+      {images.map((src, idx) => (
+        <div
+          key={src}
+          className="absolute inset-0 w-full h-full transition-opacity duration-1000"
+          style={{
+            backgroundImage: `url(${src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: current === idx ? 1 : 0,
+            zIndex: 0,
+            transition: "opacity 1s ease"
+          }}
+        />
+      ))}
+      <div className="container h-full text-white flex flex-col justify-center relative z-10">
         {/* subtitle */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -46,23 +75,3 @@ export const Header = ({ height = '' }) => {
     </div>
   );
 };
-
-const data = [
-  {
-    title:
-      "Один из крупнейших заводов керамического и облицовочного кирпича в центральной Азии",
-    img: "/banner-icons/card-icon-1.svg",
-  },
-  {
-    title: "Полностью автоматизированное производство",
-    img: "/banner-icons/card-icon-2.svg",
-  },
-  {
-    title: "Европейское оборудование от мировых производителей",
-    img: "/banner-icons/card-icon-3.svg",
-  },
-  {
-    title: "Производительность – более 80 миллионов кирпичей в год!",
-    img: "/banner-icons/card-icon-4.svg",
-  },
-];
