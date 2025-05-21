@@ -21,8 +21,8 @@ export const Facilites = () => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {data1.map((item, i) => (
-              <div key={i} className="text-white backdrop-blur-lg bg-semi-transparent-black rounded-2xl p-5">
+            {data1.map((item) => (
+              <div key={item.title} className="text-white backdrop-blur-lg bg-semi-transparent-black rounded-2xl p-5">
                 <div className="flex items-center gap-2">
                     <div className="min-w-[40px] aspect-square">
                       <Image
@@ -42,8 +42,8 @@ export const Facilites = () => {
           ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
-            {data2.map((item, i) => (
-                <div key={i} className="text-white backdrop-blur-md bg-semi-transparent-black rounded-2xl p-5">
+            {data2.map((item) => (
+                <div key={item.title} className="text-white backdrop-blur-md bg-semi-transparent-black rounded-2xl p-5">
                   <div className="flex items-center gap-2">
                     <div className="min-w-[40px] aspect-square">
                       <Image
@@ -57,8 +57,8 @@ export const Facilites = () => {
                   <span className="text-lg md:text-xl font-bold">{item.title}</span>
                 </div>
                 <div>
-                  {item.subItems.map((subItem, i) => (
-                    <p key={i} className="mt-5 text-base md:text-lg">
+                  {item.subItems.map((subItem) => (
+                    <p key={subItem.title} className="mt-5 text-base md:text-lg">
                       <b className="font-bold">
                       {subItem.title}: 
                       </b>

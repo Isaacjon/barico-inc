@@ -33,9 +33,9 @@ export const Products = () => {
     <div className=" bg-white p-8">
       <h2 className="text-3xl font-bold text-center mb-8">Что мы предлагаем ?</h2>
       <div className="md:h-[500px] w-3/5 mx-auto md:grid md:grid-cols-2 md:grid-rows-2 gap-12 sm:flex sm:flex-col">
-        {products.map((product, idx) => (
+        {products.map((product) => (
           <div
-            key={idx + product.image}
+            key={`${product.name}-${product.image}`}
             className={`
                        flex 
                        flex-col
