@@ -23,12 +23,12 @@ export const AboutCompany = () => {
                 className="flex items-start md:items-center gap-5 flex-col md:flex-row"
               >
                 <h3 className="text-black leading-[130%] text-[3.2vh] font-bold mb-[4vh]">
-                  <b className="text-[1.8vh] font-semibold text-brand">О компании</b>
+                  <b className="text-[1.8vh] font-semibold text-brand" >О компании</b>
                   <br />
                   Barichem Inc.
                 </h3>
 
-                <button className="m-[5vh_0_7vh] md:m-0 bg-brand font-bold text-white border-none py-[13px] px-[25px]" >
+                <button onClick={() => window.navigator.vibrate(200)} className="m-[5vh_0_7vh] md:m-0 bg-brand font-bold text-white border-none py-[13px] px-[25px]" >
                   подробно
                 </button>
               </motion.div>

@@ -51,14 +51,28 @@ export const metadata: Metadata = {
     "BaCO3 в Узбекистане",
     "BARICHEM INC."
   ],
+  authors: [{ name: "BARICHEM INC." }],
+  creator: "BARICHEM INC.",
+  publisher: "BARICHEM INC.",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://barichem.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Производство BaCO3 | Высококачественный углекислый барий",
     description: "Современное производство углекислого бария (BaCO3), ориентированное на российский и узбекский рынки. Качество, надежность, эффективность.",
-    url: "https://barico-inc.netlify.app/",
+    url: "https://barichem.com/",
+    siteName: "BARICHEM INC.",
+    locale: "ru_RU",
     type: "website",
     images: [
       {
-        url: "https://barico-inc.netlify.app/barichem-banner.jpg",
+        url: "https://barichem.com/barichem-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Производство углекислого бария"
@@ -69,9 +83,22 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Производство BaCO3 | Высококачественный углекислый барий",
     description: "BARICHEM INC. специализируется на производстве высокочистого углекислого бария для различных отраслей промышленности.",
-    images: ["https://barico-inc.netlify.app/barichem-banner.jpg", "https://barico-inc.netlify.app/demand-1.png", "https://barico-inc.netlify.app/demand-2.png", "https://barico-inc.netlify.app/demand-2.png", "https://barico-inc.netlify.app/demand-3.png", "https://barico-inc.netlify.app/demand-4.png"] // bigger photo recommended
+    images: ["https://barichem.com/barichem-banner.jpg"]
   },
-  robots: "index, follow"
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-site-verification', // Add your Google Search Console verification code
+  },
 };
 
 
