@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import {Header, Navbar} from '../../components';
+import {Contact, Header, Navbar} from '../../components';
 export default function BariumCarbonatePage() {
   const [showPdf, setShowPdf] = useState(false);
 
@@ -91,6 +91,7 @@ export default function BariumCarbonatePage() {
           </div>
         </div>
       </section>
+      <Contact />
     </main>
   );
 }
